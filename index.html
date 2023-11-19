@@ -15,20 +15,95 @@
 </head>
 
 <body class="antialiased text-slate-400 bg-slate-900">
-	<div class="absolute -z-20 top-0 inset-x-0 flex justify-center overflow-hidden pointer-events-none ">
-		<picture>
-			<img src="./src/assets/background-dark.png" alt="" class="opacity-25 flex-none max-w-none hidden">
-		</picture>
-	</div>
+
 	<header
 		class="max-w-7xl bg-slate-900 max-w-8xl mx-auto border-b border-slate-300/10
-	sticky top-0 z-40 w-full backdrop-blur-lg flex-none transition-colors duration-500 supports-backdrop-blur:bg-white/60 bg-slate-900/75 ">
+	sticky top-0 z-90 w-full backdrop-blur-lg flex-none transition-colors duration-500 supports-backdrop-blur:bg-white/60 bg-slate-900/75 relative">
 		<nav
 			class="flex items-center py-4  lg:px-8  mx-4 lg:mx-0 text-sm leading-6 font-semibold text-slate-200 justify-between">
+
 			<a href="/" class="mr-3 flex-none overflow-hidden md:w-auto">
-				< ViktorPls />
+				Victor.dev
 			</a>
-			<ul class="grid grid-cols-4 gap-4 text-center">
+
+			<div id="drawer" class="hidden md:hidden absolute top-0 left-0 h-screen w-screen mt-[65px] bg-black/90 ">
+				<div class="container px-8 py-12">
+
+					<ul class="flex flex-col gap-4 mt-12 text-sky-500">
+						<li class="hover:text-sky-400">
+							<a href="#skills" class="p-2 text-2xl">Skills</a>
+						</li>
+						<li class="hover:text-sky-400">
+							<a href="#about-me" class="p-2 text-2xl">Sobre mi</a>
+						</li>
+						<li class="hover:text-sky-400">
+							<a href="#projects" class="p-2 text-2xl">Proyectos</a>
+						</li>
+						<li class="hover:text-sky-400">
+							<a href="#contact" class="p-2 text-2xl">Contacto</a>
+						</li>
+					</ul>
+
+					<div class="mt-12 inline-block">
+						<a href="www.google.com"
+							class="text-lg bg-sky-600 rounded-lg px-4 py-2 flex flex-row items-center">
+							<span>Curriculum</span>
+							<span class="ml-2">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+									stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+									<path stroke-linecap="round" stroke-linejoin="round"
+										d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+								</svg>
+							</span>
+						</a>
+
+					</div>
+
+					<div class="mt-12 text-gray-300">
+						<span class="text-lg font-light">Tambien me puedes encontrar en redes:</span>
+						<ul class="flex flex-col gap-2.5 mt-6">
+							<li>
+								<a href="https://www.linkedin.com/in/victorgabrielvides/" target="_blank"
+									title="Ir a Linkedin">
+									<span>
+
+									</span>
+									Linkedin
+								</a>
+							</li>
+							<li>
+								<a href="https://www.linkedin.com/in/victorgabrielvides/" target="_blank"
+									title="Ir a Github">
+									<span>
+
+									</span>
+									Github
+								</a>
+							</li>
+					</div>
+
+				</div>
+			</div>
+
+			<button id="button-nav" class="rounded-md md:hidden">
+				<div class="mx-auto p-1">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+						stroke="currentColor" class="w-6 h-6">
+						<path stroke-linecap="round" stroke-linejoin="round"
+							d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+					</svg>
+				</div>
+				<!-- Todo: Ocultar el boton de menu cuando se haga click -->
+				<div class="hidden mx-auto p-1">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+						<path fill-rule="evenodd"
+							d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+							clip-rule="evenodd" />
+					</svg>
+				</div>
+			</button>
+
+			<ul class="hidden md:grid grid-cols-4 gap-4 text-center">
 				<li class="hover:text-sky-400">
 					<a href="#skills">Skills</a>
 				</li>
@@ -45,10 +120,13 @@
 		</nav>
 	</header>
 
-	<main class="mx-auto max-w-7xl lg:flex flex-col">
-		<section class="px-6 lg:px-8 bg-gradient-to-b from-sky-500/10 to-slate-800/10 pb-6 bg-[url('fondo.jpg')] ">
+	<main class="container mx-auto max-w-7xl lg:flex flex-col bg-no-repeat bg-auto" 
+	style="background-image: url(./src/assets/hero-dark.jpg)">
+
+		<section class="px-6 lg:px-8 bg-gradient-to-b from-sky-500/10 to-violet-500/10 pb-6"
+		>
 			<div class="flex flex-col items-center text-center">
-				<h1 class="mt-14 font-display text-4xl/tight font-light text-white">
+				<h1 class="mt-14 font-display text-4xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-violet-500">
 					Victor Gabriel Vides
 				</h1>
 				<h2 class="text-sky-300">
@@ -63,12 +141,13 @@
 			</div>
 		</section>
 
-		<section class="px-6 lg:px-8 pb-24" id="about-me">
-			<h3 class="sm:text-3xl font-mono font-medium text-sky-500 text-sky-400  font-extrabold tracking-tight   mb-8">
+		<section class="px-6 lg:px-8 pt-16 pb-4 bg-gradient-to-b from-violet-500/10 to-fucsia-500/10" id="about-me">
+			<h3
+				class="text-2xl font-mono font-extrabold text-sky-500 text-sky-400  font-extrabold tracking-tight mb-8 bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-violet-500">
 				About Me
 			</h3>
 
-			<div class="flex flex-col text-xl text-gray-300 ">
+			<div class="flex flex-col text-lg text-gray-300 ">
 				<p class="mb-6">
 					Además de trabajar como Frontend Developer, tengo conocimientos en otras areas como <strong>Backend
 						(Node.js -
@@ -87,63 +166,109 @@
 			</div>
 		</section>
 
-		<section class="px-6 lg:px-8 pb-24" id="skills">
-			<h3 class="sm:text-3xl font-mono font-medium text-sky-500 text-sky-400  font-extrabold tracking-tight  mb-8">
+		<section class="px-6 lg:px-8 pt-16 pb-4" id="skills">
+			<h3
+				class="text-2xl font-mono font-extrabold text-sky-500 text-sky-400  font-extrabold tracking-tight mb-8 bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-violet-500">
 				Stack and Technologies
 			</h3>
+			<p class="mb-4">
+				Estas son algunas de las tecnologías que utilizo para desarrollar mis proyectos
+			</p>
 
-			<div class="grid grid-cols-4 gap-8 m-4">
-				<div
-					class="grid content-center content-between justify-items-center bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white rounded-xl px-2 pt-2 pb-4 shadow-lg shadow-slate-900 ">
-					<div class="m-4 break-keep">
-						<img class="" src="./src/assets/icons/javascript.svg" 
-							alt="Visual Studio Code">
+			<div class="space-y-4">
+				<p class="text-lg mb-2">Frontend</p>
+				<div class="flex flex-wrap gap-4 ">
+					<div
+						class="bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white p-4 rounded-md place-self-auto">
+						<img src="./src/assets/icons/html5.svg" width="64px" height="64px" class="flex h-16 mx-1 my-2"
+							alt="HTML 5">
+						<p class="text-center">HTML</p>
 					</div>
-					<p class="font-semibold text-sm">Javascript</p>
+					<div
+						class="bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white p-4 rounded-md place-self-auto">
+						<img src="./src/assets/icons/css.svg" width="64px" height="64px" class="flex h-16 mx-1 my-2"
+							alt="CSS 3">
+						<p class="text-center">CSS</p>
+					</div>
+					<div
+						class="bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white p-4 rounded-md place-self-auto">
+						<img src="./src/assets/icons/javascript.svg" width="64px" height="64px"
+							class="flex h-16 mx-1 my-2" alt="Javascript">
+						<p class="text-center">Javascript</p>
+					</div>
+					<div
+						class="bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white p-4 rounded-md place-self-auto">
+						<img src="./src/assets/icons/react.svg" width="64px" height="64px" class="flex h-16 mx-1 my-2"
+							alt="ReactJs">
+						<p class="text-center">ReactJs</p>
+					</div>
+					<div
+						class="bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white p-4 rounded-md place-self-auto">
+						<img src="./src/assets/icons/vue.svg" width="64px" height="64px" class="flex h-16 mx-1 my-2"
+							alt="VueJs">
+						<p class="text-center">VueJs</p>
+					</div>
 				</div>
-
-				<div
-					class="grid content-center content-between justify-items-center bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white rounded-xl px-2 pt-2 pb-4 shadow-lg shadow-slate-900">
-					<div class="m-4 break-keep">
-						<img class="" src="./src/assets/icons/react.svg"  alt="React Js">
+				<p class="text-lg mb-2">Backend</p>
+				<div class="flex flex-wrap gap-4 ">
+					<div
+						class="bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white p-4 rounded-md place-self-auto">
+						<img src="./src/assets/icons/nodejs.svg" width="64px" height="64px" class="flex h-16 mx-1 my-2"
+							alt="NodeJs">
+						<p class="text-center">NodeJs</p>
 					</div>
-					<p class="font-semibold text-sm">React JS</p>
-				</div>
-
-				<div
-					class="grid content-center content-between justify-items-center bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white rounded-xl px-2 pt-2 pb-4 shadow-lg shadow-slate-900">
-					<div class="m-4 break-keep">
-						<img class="" src="./src/assets/icons/vue.svg"  alt="Vue Js">
+					<div
+						class="bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white p-4 rounded-md place-self-auto">
+						<img src="./src/assets/icons/expressjs.svg" width="64px" height="64px"
+							class="flex h-16 mx-1 my-2" alt="ExpessJs">
+						<p class="text-center">ExpessJs</p>
 					</div>
-					<p class="font-semibold text-sm">Vue JS</p>
-				</div>
-
-				<div
-					class="grid content-center content-between justify-items-center bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white rounded-xl px-2 pt-2 pb-4 shadow-lg shadow-slate-900">
-					<div class="m-4 break-keep">
-						<img class="" src="./src/assets/icons/nodejs.svg"  alt="Node Js">
+					<div
+						class="bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white p-4 rounded-md place-self-auto">
+						<img src="./src/assets/icons/firebase.svg" width="64px" height="64px"
+							class="flex h-16 mx-1 my-2" alt="Firebase">
+						<p class="text-center">Firebase</p>
 					</div>
-					<p class="font-semibold text-sm">Node JS</p>
+					<div
+						class="bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white p-4 rounded-md place-self-auto">
+						<img src="./src/assets/icons/aws.svg" width="64px" height="64px" class="flex h-16 mx-1 my-2"
+							alt="Amazon Web Services">
+						<p class="text-center">AWS</p>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="px-6 lg:px-8 pb-24" id="projects">
+		<section class="px-6 lg:px-8 pt-16 pb-4 bg-gradient-to-b from-transparent to-violet-500/10" id="projects">
 			<h3
-				class="sm:text-3xl font-mono font-medium text-sky-500 text-sky-400  font-extrabold tracking-tight pb-4 mb-8">
+				class="text-2xl font-mono font-extrabold text-sky-500 text-sky-400  font-extrabold tracking-tight pb-4 mb-8 bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-violet-500">
 				Featured projects
 			</h3>
 
 			<div class="flex flex-col gap-8">
-				<div
-					class="max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl bg-gradient-to-t from-sky-500/10 to-slate-800/10">
+				<div class="rounded-xl shadow-md overflow-hidden bg-gradient-to-t from-sky-500/10 to-slate-800/10">
+					<div class="md:flex">
+						<div class="md:shrink-0">
+							<img class="h-48 w-full object-cover md:h-full md:w-48" src="./src/assets/enterprise-3.webp"
+								alt="Example project image">
+						</div>
+						<div class="p-8">
+							<div class="uppercase tracking-wide text-sm text-sky-500 font-semibold">Nombre de este
+								proyecto
+							</div>
+							<p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nam
+								repudiandae non sequi quod dolorem aspernatur veniam commodi. Adipisci, nobis!</p>
+						</div>
+					</div>
+				</div>
+				<div class="rounded-xl shadow-md overflow-hidden bg-gradient-to-t from-sky-500/10 to-slate-800/10">
 					<div class="md:flex">
 						<div class="md:shrink-0">
 							<img class="h-48 w-full object-cover md:h-full md:w-48" src="./src/assets/example.png"
-								alt="Modern building architecture">
+								alt="Example project image">
 						</div>
 						<div class="p-8">
-							<div class="uppercase tracking-wide text-sm text-sky-500 font-semibold">Nombre del proyecto
+							<div class="uppercase tracking-wide text-sm text-sky-500 font-semibold">Otro proyecto
 							</div>
 							<p class="mt-2">Aqui pondria mis proyectos si tuviera algunoooo</p>
 						</div>
@@ -152,20 +277,27 @@
 			</div>
 		</section>
 
-		<section class="px-6 lg:px-8 pb-24" id="contact">
+		<section class="px-6 lg:px-8 pt-16 pb-4 bg-gradient-to-b from-violet-500/10 to-transparent" id="contact">
 			<div class="grid gap-2 sm:grid-cols-2 sm:p-8 bg-gray-900 rounded-xl border border-slate-300/10">
 				<div class="grid sm:grid-rows-5 p-4">
 					<div class="sm:row-span-2">
 						<h2 class="text-2xl font-semibold leading-7 text-gray-300 mb-4">Get in touch with me</h2>
 						<p class="mt-1 text-xl leading-6 ">Let's work on more meaningful projects together :)</p>
 					</div>
-					
+
 					<div class="grid sm:row-span-3">
 						<span class="mt-1 text-sm md:text-xl leading-6">
 							Fill the form or <a href="mailto:me@gmail.com" class="underline">Send me an email</a>
 						</span>
 						<div class="flex items-center mt-4 border-t border-slate-300/10">
-							<i class="p-1 sm:text-3xl">✉️</i>
+							<i class="p-2 sm:text-3xl border-r border-slate-300/10">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+									stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+									<path stroke-linecap="round" stroke-linejoin="round"
+										d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+								</svg>
+
+							</i>
 							<div class="flex flex-col p-2">
 								<span class="text-gray-300 font-semibold mt-1">Email</span>
 								<span class="text-gray-300 mt-1">myemail@gmail.com</span>
@@ -181,7 +313,7 @@
 							Name
 						</label>
 						<input type="text"
-							class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+							class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
 					</div>
 
 					<div class="col-span-full">
@@ -189,16 +321,18 @@
 							Email address
 						</label>
 						<input type="email" name="email" id="email"
-							class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+							class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
 					</div>
 
 					<div class="col-span-full">
 						<label for="about" class="block text-sm font-medium leading-6 text-gray-900 mt-2">About</label>
 						<textarea id="about" name="about" rows="3"
-							class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+							class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+						</textarea>
 					</div>
-					<button class="rounded-md w-full text-center border border-black/90 py-2 font-bold font-mono">GET IT
-						TOUCH</button>
+					<button class="rounded-md w-full text-center border border-black/90 py-2 font-bold font-mono">
+						GET IT TOUCH
+					</button>
 				</form>
 			</div>
 		</section>
@@ -234,6 +368,7 @@
 			</div>
 		</div>
 	</footer>
+	<script src="src/main.js"></script>
 </body>
 
 </html>
