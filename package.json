@@ -1,0 +1,26 @@
+{
+  "name": "victorgabriel.dev",
+  "version": "1.0.0",
+  "description": "Personal site of Victor Gabriel Vides",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViktorPls/myWeb.git"
+  },
+  "keywords": [
+    "VictorGabrielVides",
+    "Frontend",
+    "Developer",
+    "Software",
+    "Engineer"
+  ],
+  "author": "Gabriel Vides",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViktorPls/myWeb/issues"
+  },
+  "homepage": "https://github.com/ViktorPls/myWeb#readme"
+}
