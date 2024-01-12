@@ -1,0 +1,43 @@
+---
+import Header from "../components/Header.astro";
+import Footer from '../components/Footer.astro'; // Import the 'Footer' component here
+interface Props {
+    title: string;
+    description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <Header />
+        <slot />
+        <Footer />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		color-scheme: light dark;
+	}
+	html {
+		/* font-family: "Onest", system-ui, sans-serif; */
+		font-family: system-ui, sans-serif;
+	}
+
+	body {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+	}
+</style>
