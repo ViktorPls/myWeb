@@ -1,24 +1,21 @@
 ---
-import Logo from './header/Logo.astro';
-import NavLinks from './header/NavLinks.astro';
-import Button from './header/Button.astro';
-
-const onButtonClick = () => {
-	
-	console.log('button clicked');	
-}
-
+import Logo from "./header/Logo.astro";
+import NavLinks from "./header/NavLinks.astro";
+import Button from "./header/Button.astro";
 ---
-<header class="fixed w-full z-50 h-20">
-	<nav class="border-b border-slate-300/10 backdrop-blur-lg transition-colors duration-500 supports-backdrop-blur:bg-white/60 bg-slate-900/75 shadow-lg drop-shadow-lg">
-		<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-			<Logo/>
-			<Button onclick={onButtonClick} />
-		<div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
-			<NavLinks/>
-		</div>
 
-</div>
-	  </nav>
-	  
+<header class="fixed w-full z-50 h-20">
+  <nav
+    class="border-b border-slate-300/10 backdrop-blur-lg transition-colors duration-500 supports-backdrop-blur:bg-white/60 bg-slate-900/75 shadow-lg drop-shadow-lg"
+  >
+    <div
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+    >
+      <Logo />
+      <Button />
+      <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+        <NavLinks />
+      </div>
+    </div>
+  </nav>
 </header>
