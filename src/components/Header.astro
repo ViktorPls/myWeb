@@ -13,9 +13,18 @@ import Button from "./header/Button.astro";
     >
       <Logo />
       <Button />
-      <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+      <div class="hidden w-full md:block md:w-auto" id="navLinksContainer">
         <NavLinks />
       </div>
     </div>
   </nav>
 </header>
+
+<script>
+  const $navLink = document.getElementById("navLinksContainer");
+  const $button = document.getElementById("buttonNav");
+
+  $button.addEventListener("click", () => {
+    $navLink.classList.toggle("hidden");
+  });
+</script>
