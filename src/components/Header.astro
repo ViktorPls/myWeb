@@ -1,30 +1,30 @@
 ---
-import Logo from "./header/Logo.astro";
-import NavLinks from "./header/NavLinks.astro";
-import Button from "./header/Button.astro";
+import Logo from './header/Logo.astro'
+import NavLinks from './header/NavLinks.astro'
+import Button from './header/Button.astro'
 ---
 
 <header class="fixed w-full z-50 h-20">
-  <nav
-    class="border-b border-slate-300/10 backdrop-blur-lg transition-colors duration-500 supports-backdrop-blur:bg-white/60 bg-slate-900/75 shadow-lg drop-shadow-lg"
-  >
-    <div
-      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
-    >
-      <Logo />
-      <Button />
-      <div class="hidden w-full md:block md:w-auto" id="navLinksContainer">
-        <NavLinks />
-      </div>
-    </div>
-  </nav>
+	<nav
+		class="border-b border-slate-300/10 backdrop-blur-lg transition-colors duration-500 supports-backdrop-blur:bg-white/60 shadow-lg drop-shadow-lg"
+	>
+		<div
+			class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+		>
+			<Logo />
+			<Button />
+			<div class="hidden w-full md:block md:w-auto" id="navLinksContainer">
+				<NavLinks />
+			</div>
+		</div>
+	</nav>
 </header>
 
 <script>
-  const $navLink = document.getElementById("navLinksContainer");
-  const $button = document.getElementById("buttonNav");
+	const $navLink = document.getElementById('navLinksContainer')
+	const $button = document.getElementById('buttonNav')
 
-  $button.addEventListener("click", () => {
-    $navLink.classList.toggle("hidden");
-  });
+	$button?.addEventListener('click', () => {
+		$navLink?.classList.toggle('hidden')
+	})
 </script>

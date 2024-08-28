@@ -1,32 +1,32 @@
 ---
-import SocialLinks from "./SocialLinks.astro";
+import SocialLinks from './SocialLinks.astro'
 
-const profile = "/src/assets/profile.png";
+// const profile = '/src/assets/profile.jpg'
 ---
 
 <section class="container flex justify-center px-6 lg:px-8 pb-6">
-  <div
-    class="absolute w-screen bottom-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_0%,#000_70%,transparent_100%)]"
-  >
-  </div>
-  <div class="flex flex-col items-center text-center">
-    <img
-      loading="lazy"
-      class="w-36 h-36 rounded-full border-4 border-sky-500 my-10"
-      src={profile}
-      draggable="false"
-      alt="Victor Gabriel Vides"
-    />
-    <h1
-      class="font-bold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center
+	<div
+		class="absolute w-screen -z-50 bottom-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_0%,#000_70%,transparent_100%)]"
+	>
+	</div>
+	<div class="flex flex-col items-center text-center">
+		<!-- <img
+			loading="lazy"
+			class="w-36 h-36 rounded-full border-4 border-sky-500 my-10"
+			src={profile}
+			draggable="false"
+			alt="Victor Gabriel Vides"
+		/> -->
+		<h1
+			class="mt-20 font-bold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center
       font-display bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-violet-500"
-    >
-      Victor Gabriel Vides
-    </h1>
-    <h2 class="text-sky-300">Full-Stack Web Developer</h2>
-    <p class="mt-4 text-sm/6 text-gray-300">
-      Full-stack web developer from Argentina living in Berlin, Germany
-    </p>
-    <SocialLinks />
-  </div>
+		>
+			Victor Gabriel Vides
+		</h1>
+		<h2 class="text-sky-300">Full-Stack Web Developer</h2>
+		<p class="mt-4 text-sm/6 text-gray-300">
+			Full-stack web developer from Argentina living in Berlin, Germany
+		</p>
+		<SocialLinks />
+	</div>
 </section>

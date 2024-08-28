@@ -1,0 +1,22 @@
+---
+interface PillSkillProps {
+	icon: string
+	name: string
+}
+
+const { icon, name } = Astro.props
+---
+
+<div
+	class="bg-violet-400 text-slate-100 hover:bg-violet-800 hover:text-white bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 p-2 rounded-md place-self-auto flex flex-col items-center"
+>
+	<img
+		src={icon}
+		width="48px"
+		height="48px"
+		class="flex h-12 mx-1 my-2 object-contain"
+		alt={name}
+		loading="lazy"
+	/>
+	<p class="text-center">{name}</p>
+</div>
