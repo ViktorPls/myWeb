@@ -1,126 +1,76 @@
-<section class="px-6 lg:px-8 pt-16 pb-4" id="skills">
-    <h3
-        class="text-2xl font-mono font-extrabold text-sky-400 tracking-tight mb-8 bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-violet-500"
-    >
-        Stack and Technologies
-    </h3>
-    <p class="mb-4">
-        Estas son algunas de las tecnologías que utilizo para desarrollar mis
-        proyectos
-    </p>
+---
+import PillSkill from './PillSkill.astro'
+const techs = [
+	{
+		name: 'Javascript',
+		icon: '/icons/javascript.svg',
+	},
+	{
+		name: 'ReactJs',
+		icon: '/icons/react.svg',
+	},
+	{
+		name: 'VueJs',
+		icon: '/icons/vue.svg',
+	},
+	{
+		name: 'CSS',
+		icon: '/icons/css.svg',
+	},
+	{
+		name: 'HTML',
+		icon: '/icons/html.svg',
+	},
+	{
+		name: 'NodeJs',
+		icon: '/icons/nodejs.svg',
+	},
+	{
+		name: 'ExpessJs',
+		icon: '/icons/expressjs.svg',
+	},
+	{
+		name: 'Firebase',
+		icon: '/icons/firebase.svg',
+	},
+	{
+		name: 'AWS',
+		icon: '/icons/aws.svg',
+	},
+	{
+		name: 'Flutter',
+		icon: '/icons/flutter.svg',
+	},
+	{
+		name: 'Mongo',
+		icon: '/icons/mongodb.svg',
+	},
+	{
+		name: 'Python',
+		icon: '/icons/python.svg',
+	},
+	{
+		name: 'TailwindCSS',
+		icon: '/icons/tailwindcss.svg',
+	},
+	{
+		name: 'Typescript',
+		icon: '/icons/typescript.svg',
+	},
+]
+---
 
-    <div class="space-y-4">
-        <div class="flex flex-wrap items-center justify-center gap-4">
-            <div
-                class="bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white p-4 rounded-md place-self-auto"
-            >
-                <img
-                    src="./src/assets/icons/html5.svg"
-                    width="64px"
-                    height="64px"
-                    class="flex h-16 mx-1 my-2"
-                    alt="HTML 5"
-                />
-                <p class="text-center">HTML</p>
-            </div>
-            <div
-                class="bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white p-4 rounded-md place-self-auto"
-            >
-                <img
-                    src="./src/assets/icons/css.svg"
-                    width="64px"
-                    height="64px"
-                    class="flex h-16 mx-1 my-2"
-                    alt="CSS 3"
-                />
-                <p class="text-center">CSS</p>
-            </div>
-            <div
-                class="bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white p-4 rounded-md place-self-auto"
-            >
-                <img
-                    src="./src/assets/icons/javascript.svg"
-                    width="64px"
-                    height="64px"
-                    class="flex h-16 mx-1 my-2"
-                    alt="Javascript"
-                />
-                <p class="text-center">Javascript</p>
-            </div>
-            <div
-                class="bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white p-4 rounded-md place-self-auto"
-            >
-                <img
-                    src="./src/assets/icons/react.svg"
-                    width="64px"
-                    height="64px"
-                    class="flex h-16 mx-1 my-2"
-                    alt="ReactJs"
-                />
-                <p class="text-center">ReactJs</p>
-            </div>
-            <div
-                class="bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white p-4 rounded-md place-self-auto"
-            >
-                <img
-                    src="./src/assets/icons/vue.svg"
-                    width="64px"
-                    height="64px"
-                    class="flex h-16 mx-1 my-2"
-                    alt="VueJs"
-                />
-                <p class="text-center">VueJs</p>
-            </div>
-        </div>
-        <div class="flex flex-wrap items-center justify-center gap-4">
-            <div
-                class="bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white p-4 rounded-md place-self-auto"
-            >
-                <img
-                    src="./src/assets/icons/nodejs.svg"
-                    width="64px"
-                    height="64px"
-                    class="flex h-16 mx-1 my-2"
-                    alt="NodeJs"
-                />
-                <p class="text-center">NodeJs</p>
-            </div>
-            <div
-                class="bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white p-4 rounded-md place-self-auto"
-            >
-                <img
-                    src="./src/assets/icons/expressjs.svg"
-                    width="64px"
-                    height="64px"
-                    class="flex h-16 mx-1 my-2"
-                    alt="ExpessJs"
-                />
-                <p class="text-center">ExpessJs</p>
-            </div>
-            <div
-                class="bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white p-4 rounded-md place-self-auto"
-            >
-                <img
-                    src="./src/assets/icons/firebase.svg"
-                    width="64px"
-                    height="64px"
-                    class="flex h-16 mx-1 my-2"
-                    alt="Firebase"
-                />
-                <p class="text-center">Firebase</p>
-            </div>
-            <div
-                class="bg-gray-800 text-slate-100 hover:bg-gray-700 hover:text-white p-4 rounded-md place-self-auto"
-            >
-                <img
-                    src="./src/assets/icons/aws.svg"
-                    width="64px"
-                    height="64px"
-                    class="flex h-16 mx-1 my-2"
-                    alt="Amazon Web Services"
-                />
-                <p class="text-center">AWS</p>
-            </div>
-        </div>
-    </div>
+<section class="px-6 lg:px-8 pt-16 pb-4" id="skills">
+	<h3
+		class="text-2xl font-mono font-extrabold text-sky-400 tracking-tight mb-8 bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-violet-500"
+	>
+		Stack and Technologies
+	</h3>
+
+	<div class="space-y-4">
+		<div class="flex flex-wrap items-center justify-center gap-4">
+			{techs.map((item) => <PillSkill icon={item.icon} name={item.name} />)}
+		</div>
+		<div class="flex flex-wrap items-center justify-center gap-4"></div>
+	</div>
 </section>

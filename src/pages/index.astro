@@ -1,26 +1,18 @@
 ---
-// Welcome to Astro! Everything between these triple-dash code fences
-// is your "component frontmatter". It never runs in the browser.
-import AboutMe from "../components/AboutMe.astro";
-import Contact from "../components/ContactForm.astro";
-import Hero from "../components/Hero.astro";
-import Projects from "../components/Projects.astro";
-import Skills from "../components/Skills.astro";
-import Layout from "../layouts/Layout.astro";
+import AboutMe from '../components/AboutMe.astro'
+import Contact from '../components/ContactForm.astro'
+import Hero from '../components/Hero.astro'
+import Skills from '../components/Skills.astro'
+import Layout from '../layouts/Layout.astro'
 
-console.log("This runs in your terminal, not the browser!");
+console.log('This runs in your terminal, not the browser!')
 ---
 
-<!-- Below is your "component template." It's just HTML, but with
-     some magic sprinkled in to help you build great templates. -->
-<Layout
-	title="Victor Gabriel Vides - Software Developer"
-	description="My Description"
->
-	<main class="container mx-auto max-w-7xl flex flex-col mt-16">
+<Layout>
+	<main class="mx-auto max-w-7xl flex flex-col mt-16">
 		<Hero />
-		<AboutMe />
 		<Skills />
+		<AboutMe />
 		<Contact />
 	</main>
 </Layout>
