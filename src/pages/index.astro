@@ -1,8 +1,8 @@
 ---
-import AboutMe from '../components/AboutMe.astro'
-import Contact from '../components/ContactForm.astro'
-import Hero from '../components/Hero.astro'
-import Skills from '../components/Skills.astro'
+import AboutMe from '../components/sections/AboutMe.astro'
+import Contact from '../components/sections/Contact.astro'
+import Hero from '../components/sections/Hero.astro'
+import Skills from '../components/sections/Skills.astro'
 import Layout from '../layouts/Layout.astro'
 
 console.log('This runs in your terminal, not the browser!')
@@ -11,8 +11,8 @@ console.log('This runs in your terminal, not the browser!')
 <Layout>
 	<main class="mx-auto max-w-7xl flex flex-col mt-16">
 		<Hero />
-		<Skills />
 		<AboutMe />
+		<Skills />
 		<Contact />
 	</main>
 </Layout>

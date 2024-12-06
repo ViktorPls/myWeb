@@ -1,0 +1,71 @@
+---
+import PillSkill from '../common/PillSkill.astro'
+const groupedTechs = [
+	{
+		category: 'Frontend',
+		items: [
+			{ name: 'Javascript', icon: '/icons/javascript.svg' },
+			{ name: 'ReactJs', icon: '/icons/react.svg' },
+			{ name: 'VueJs', icon: '/icons/vue.svg' },
+			{ name: 'CSS', icon: '/icons/css.svg' },
+			{ name: 'HTML', icon: '/icons/html.svg' },
+			{ name: 'TailwindCSS', icon: '/icons/tailwindcss.svg' },
+		],
+	},
+	{
+		category: 'Backend',
+		items: [
+			{ name: 'NodeJs', icon: '/icons/nodejs.svg' },
+			{ name: 'ExpessJs', icon: '/icons/expressjs.svg' },
+		],
+	},
+	{
+		category: 'Bases de Datos',
+		items: [
+			{ name: 'Mongo', icon: '/icons/mongodb.svg' },
+			{ name: 'Firebase', icon: '/icons/firebase.svg' },
+		],
+	},
+	{
+		category: 'Otros',
+		items: [
+			{ name: 'AWS', icon: '/icons/aws.svg' },
+			{ name: 'Flutter', icon: '/icons/flutter.svg' },
+			{ name: 'Python', icon: '/icons/python.svg' },
+			{ name: 'Typescript', icon: '/icons/typescript.svg' },
+		],
+	},
+]
+---
+
+<section class="px-6 lg:px-8 pt-16 pb-4" id="skills">
+	<h2
+		class="text-2xl font-mono font-extrabold text-sky-400 tracking-tight mb-8 bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-violet-500"
+	>
+		My Stack and Techs
+	</h2>
+
+	<ul class="space-y-8">
+		{
+			groupedTechs.map((group) => (
+				<li>
+					<section aria-labelledby={`category-${group.category.toLowerCase()}`}>
+						<h3
+							id={`category-${group.category.toLowerCase()}`}
+							class="text-xl font-bold text-sky-900 mb-4"
+						>
+							{group.category}
+						</h3>
+						<ul class="flex flex-wrap gap-4">
+							{group.items.map((tech) => (
+								<li class="flex items-center">
+									<PillSkill icon={tech.icon} name={tech.name} />
+								</li>
+							))}
+						</ul>
+					</section>
+				</li>
+			))
+		}
+	</ul>
+</section>
