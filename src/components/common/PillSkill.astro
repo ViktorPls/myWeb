@@ -4,7 +4,7 @@ interface PillSkillProps {
 	name: string
 }
 
-const { icon, name } = Astro.props
+const { icon, name }: PillSkillProps = Astro.props
 ---
 
 <div
@@ -15,7 +15,7 @@ const { icon, name } = Astro.props
 		width="48px"
 		height="48px"
 		class="flex h-12 mx-1 my-2 object-contain"
-		alt={name}
+		alt={`${name} logo`}
 		loading="lazy"
 	/>
 	<p class="text-center">{name}</p>
